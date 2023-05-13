@@ -26,7 +26,6 @@ function getRecipesFromStorage() {
   //           be no more than a few lines.
   let recipes = [];
   recipes = JSON.parse(localStorage.getItem("recipes"));
-  console.log(recipes.length);
   return recipes;
 }
 
@@ -48,7 +47,6 @@ function addRecipesToDocument(recipes) {
   for(let i in recipes){
     let newRecipe = document.createElement('recipe-card');
     newRecipe.data = recipes[i];
-    console.log(i)
     mainEl.appendChild(newRecipe);
 
   }
